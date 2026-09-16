@@ -36,7 +36,7 @@ export default {
       status: upstreamResp.status,
       headers: {
         "Content-Type": "application/json",
-        "Cache-Control": `public, max-age=${CACHE_SECONDS}`,
+        "Cache-Control": upstreamResp.ok ? `public, max-age=${CACHE_SECONDS}` : "no-store",
         ...corsHeaders(env)
       }
     });
