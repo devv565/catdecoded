@@ -1,0 +1,12 @@
+name = "cat-decoded-yt-proxy"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# CORS: only this origin may call the proxy from a browser.
+# Update if you use a custom domain instead of github.io.
+[vars]
+ALLOWED_ORIGIN = "https://devv565.github.io"
+
+# The real YouTube API key is NOT stored here (this file is committed to git).
+# Set it as an encrypted secret instead:
+#   npx wrangler secret put YOUTUBE_API_KEY
